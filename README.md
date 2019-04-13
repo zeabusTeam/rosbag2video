@@ -1,2 +1,2 @@
-# ROS1Bag to MP4
-tool for convert video in ros1 bag to mp4 file
+# ROS1Bag to AVI
+tool for convert video in ros1 bag to AVI file

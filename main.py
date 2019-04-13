@@ -1,10 +1,10 @@
 #!/usr/bin/python2
-from bag2mp4 import bag2mp4
+from bag2vid import bag2vid
 import cv2
 
 
 def main():
-    obj = bag2mp4('test.bag')
+    obj = bag2vid('test.bag')
     raw_topics = obj.getalltopic()
     img_topics = obj.filterImg(raw_topics)
     for tp_name, tp_type, tp_hz in img_topics:

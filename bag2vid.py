@@ -6,7 +6,7 @@ from cv_bridge import CvBridge
 import re
 
 
-class bag2mp4:
+class bag2vid:
 
     TOPIC_TYPE = {
         'com': 'sensor_msgs/CompressedImage',
