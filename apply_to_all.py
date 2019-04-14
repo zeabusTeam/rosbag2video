@@ -6,7 +6,7 @@ from multiprocessing import Pool
 
 
 def callMain(filename):
-    return subprocess.call(['./main.py', filename], shell=True)
+    return subprocess.call(['./main.py "'+filename+'"'], shell=True)
 
 
 def main():

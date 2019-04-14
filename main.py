@@ -5,9 +5,12 @@ import sys
 
 
 def main():
-    path = 'test.bag'
+    path = ''
     if len(sys.argv) > 1:
         path = sys.argv[1]
+    else:
+        print('Please enter filename')
+        exit()
     obj = bag2vid(path)
     raw_topics = obj.getalltopic()
     img_topics = obj.filterImg(raw_topics)
