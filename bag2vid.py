@@ -42,6 +42,7 @@ class bag2vid:
         bridge = CvBridge()
         filename = self.name[0:-4]+'_' + \
             ".".join(re.findall("[a-zA-Z]+", topic_name))+'.avi'
+        print("Converting: "+filename)
         fourcc = cv2.VideoWriter_fourcc(*'DIVX')
         writer = None
         for topic, msg, t in self.bag.read_messages(topics=[topic_name]):
