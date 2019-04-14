@@ -1,10 +1,14 @@
 #!/usr/bin/python2
 from bag2vid import bag2vid
 import cv2
+import sys
 
 
 def main():
-    obj = bag2vid('test.bag')
+    path = 'test.bag'
+    if len(sys.argv) > 1:
+        path = sys.argv[1]
+    obj = bag2vid(path)
     raw_topics = obj.getalltopic()
     img_topics = obj.filterImg(raw_topics)
     for tp_name, tp_type, tp_hz in img_topics:
