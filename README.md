@@ -2,6 +2,8 @@
 tool for convert video in ros1 bag to AVI file
 
 ## Usage
+** You must to set your env. to ROS1 before using this **
+
 ```bash
 python3 apply_to_all.py [PATH]
 ```
