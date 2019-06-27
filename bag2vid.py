@@ -22,20 +22,17 @@ class bag2vid:
     def getalltopic(self):
         if self.name is None:
             return False
-        return self.bag.get_type_and_topic_info()
+        return self.bag.get_type_and_topic_info()[1]
 
     def filterImg(self, rostopic):
         topics = []
-        for i in rostopic:
-            topic_attrib = i.values()[0]
-            if type(topic_attrib) == str:
-                continue
-            msg_type = getattr(topic_attrib, 'msg_type', None)
+        for topic, topic_attrib in rostopic.items():
+            msg_type = topic_attrib[0]
             if msg_type is None:
                 continue
             if msg_type in self.TOPIC_TYPE.values():
                 topics.append(
-                    (i.keys()[0], msg_type, topic_attrib.frequency))
+                    (topic, msg_type, topic_attrib[3]))
         return topics
 
     def convert(self, topic_name, img_type=None, freq=10):
