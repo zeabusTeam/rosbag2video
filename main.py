@@ -1,6 +1,5 @@
 #!/usr/bin/python2
 from bag2vid import bag2vid
-import cv2
 import sys
 
 
